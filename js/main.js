@@ -14,8 +14,6 @@ $(document).ready(function($){
 
     });
     
-    
-    
     function tcRotate(tcdeg){
         $('#container').css({
             'transform'         : 'rotateY('+ tcdeg +'deg)',
