@@ -7,6 +7,7 @@ $(document).ready(function($){
     function tcRotate(deg){  
         $('#container').css({
             'transform'         : 'rotateY('+ deg +'deg)',
+            '-ms-transform'     : 'rotateY('+ deg +'deg)',
             '-webkit-transform' : 'rotateY('+ deg +'deg)'
         });
     }
