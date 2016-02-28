@@ -11,24 +11,19 @@ $(document).ready(function($){
         });
     }
     
-    $('item').on('click', function(e){
-        e.preventDefault();
-        
+    $('item').on('click', function(){
         crotation = $('#container').attr('tcc-rotation');
-        rotation = $(this).attr('tc-rotation');       
+        var rotation = $(this).attr('tc-rotation');       
         rotateto = crotation - rotation;
         tcRotate(rotateto);
         crotation = rotateto;
-        
     });
     
-    $('.tc-next').on('click', function(e){
-        e.preventDefault();
+    $('.tc-next').on('click', function(){
         rotateto -= 60;
         tcRotate(rotateto);
     });
-    $('.tc-prev').on('click', function(e){
-        e.preventDefault();
+    $('.tc-prev').on('click', function(){
         rotateto += 60;
         tcRotate(rotateto);
     });
