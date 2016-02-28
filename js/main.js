@@ -2,13 +2,25 @@ $(document).ready(function($){
 
     var crotation;
     var rotateto = 0;
-    var halfrotation = 180;
+    var itemCount = $('item').length; // count of items in corousel
+    var tcItemInitialRotation = 360/itemCount;
+    var tcZDistance = 200;
     
-    function tcRotate(deg){  
+    $('item').each( function(index) {
+                   
+        $(this).css({
+            'transform' : 'rotateY('+( tcItemInitialRotation * index )+'deg) translateZ('+tcZDistance+'px)'
+        }).attr('tc-rotation', ( tcItemInitialRotation * index ) );
+
+    });
+    
+    
+    
+    function tcRotate(tcdeg){
         $('#container').css({
-            'transform'         : 'rotateY('+ deg +'deg)',
-            '-ms-transform'     : 'rotateY('+ deg +'deg)',
-            '-webkit-transform' : 'rotateY('+ deg +'deg)'
+            'transform'         : 'rotateY('+ tcdeg +'deg)',
+            '-ms-transform'     : 'rotateY('+ tcdeg +'deg)',
+            '-webkit-transform' : 'rotateY('+ tcdeg +'deg)'
         });
     }
     
@@ -21,11 +33,11 @@ $(document).ready(function($){
     });
     
     $('.tc-next').on('click', function(){
-        rotateto -= 60;
+        rotateto -= tcItemInitialRotation;
         tcRotate(rotateto);
     });
     $('.tc-prev').on('click', function(){
-        rotateto += 60;
+        rotateto += tcItemInitialRotation;
         tcRotate(rotateto);
     });
 

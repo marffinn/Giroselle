@@ -21,6 +21,7 @@
     -webkit-transition: all 1s ease-in-out;
     transition: all 1s ease-in-out;
     width: 200px;
+    z-index: 1000;
 }
 
 item {
