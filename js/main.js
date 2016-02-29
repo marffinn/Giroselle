@@ -18,8 +18,8 @@ $(document).ready(function($){
         $('#container').css({
             'transform'         : 'rotateY('+ tcdeg +'deg)',
             '-ms-transform'     : 'rotateY('+ tcdeg +'deg)',
-            '-moz-transform'     : 'rotateY('+ tcdeg +'deg)',
-            '-o-transform'     : 'rotateY('+ tcdeg +'deg)',
+            '-moz-transform'    : 'rotateY('+ tcdeg +'deg)',
+            '-o-transform'      : 'rotateY('+ tcdeg +'deg)',
             '-webkit-transform' : 'rotateY('+ tcdeg +'deg)'
         });
     }
