@@ -5,7 +5,6 @@ $(document).ready(function($){
     var itemCount = $('item').length;
     var tcItemInitialRotation = 360/itemCount;
     var tcZDistance = 200;
-    
     $('item').each( function(index) {
                    
         $(this).css({
@@ -28,6 +27,7 @@ $(document).ready(function($){
     }
     
     function tcRotate(tcdeg){
+        
         $('#container').css({
             'transform'         : 'rotateY('+ tcdeg +'deg)',
             '-ms-transform'     : 'rotateY('+ tcdeg +'deg)',
@@ -47,10 +47,12 @@ $(document).ready(function($){
     
     $('.tc-next').on('click', function(){
         rotateto -= tcItemInitialRotation;
+        
         tcRotate(rotateto);
     });
     $('.tc-prev').on('click', function(){
         rotateto += tcItemInitialRotation;
+        
         tcRotate(rotateto);
     });
     
